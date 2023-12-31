@@ -1,0 +1,31 @@
+<p-toolbar>
+  <ng-template pTemplate="start">
+    <p-toast></p-toast>
+    <p-menu #menu [model]="menuSettings" [popup]="true"></p-menu>
+    <p-button type="button" (click)="menu.toggle($event)" icon="pi pi-bars" label="Settings"></p-button>
+  </ng-template>
+
+  <ng-template pTemplate="center">
+    <span class="p-input-icon-left" >
+        <i class="pi pi-search"></i>
+        <input pInputText placeholder="Search" [style]="{ 'border-radius': '4rem' }"/>
+    </span>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <div class="flex flex-wrap">
+      <div class="flex align-items-center gap-2">
+        <p-button icon="pi pi-user" severity="primary" [rounded]="true" [text]="true"></p-button>
+
+        <p-overlayPanel #op>
+          <p-scroller [items]="items" [itemSize]="50" scrollHeight="200px" styleClass="border-1 surface-border" [style]="{'width': '200px', 'height': '200px'}">
+            <ng-template pTemplate="item" let-item let-options="options">
+              <div class="flex align-items-center p-2" [ngClass]="{ 'surface-ground': options.odd }" style="height: 50px;">{{ item }}</div>
+            </ng-template>
+          </p-scroller>
+        </p-overlayPanel>
+        <p-button icon="pi pi-bell" (click)="op.toggle($event)" severity="primary" [rounded]="true" [text]="true"></p-button>
+      </div>
+    </div>
+  </ng-template>
+</p-toolbar>

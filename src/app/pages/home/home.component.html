@@ -1,0 +1,77 @@
+<p-tabView class="card flex flex-column md:flex-row md:justify-content-between row-gap-3">
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <i class="pi pi-eye"></i>
+        <span class="ml-1">For You</span>
+      </ng-template>
+
+      <ng-template pTemplate="content">
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+        <div class="post">
+          <app-posts [username]="'sapo'"></app-posts>
+        </div>
+      </ng-template>
+
+    </p-tabPanel>
+
+    <p-tabPanel>
+
+      <ng-template pTemplate="header">
+        <i class="pi pi-eye"></i>
+        <span class="ml-1">Following</span>
+      </ng-template>
+
+      <ng-template pTemplate="content">
+        <app-posts [username]="'pedro'"></app-posts>
+      </ng-template>
+
+    </p-tabPanel>
+
+    <p-tabPanel>
+
+      <ng-template pTemplate="header">
+        <i class="pi pi-eye"></i>
+        <span class="ml-1">Recent</span>
+      </ng-template>
+
+      <ng-template pTemplate="content">
+        <app-posts [username]="'cleber'"></app-posts>
+      </ng-template>
+
+    </p-tabPanel>
+</p-tabView>

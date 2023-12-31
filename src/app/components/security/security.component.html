@@ -1,0 +1,25 @@
+<div class="flex w-full h-full justify-content-center align-items-center ">
+  <div class="flex flex-column border-1 form-login">
+    <span class="text-lg mb-4">Authenticate</span>
+
+    <p-button (onClick)="handleLogin(AuthClientEnum.GOOGLE_CLIENT)" class="p-0 w-full login-button" >
+      <i class="pi pi-google"></i>
+      <span>Continue with Google</span>
+    </p-button>
+
+    <p-button (onClick)="handleLogin(AuthClientEnum.GIT_HUB_CLIENT)" class="p-0 w-full login-button" >
+      <i class="pi pi-github"></i>
+      <span>Continue with Git Hub</span>
+    </p-button>
+
+    <p-button (onClick)="handleLogin(AuthClientEnum.RECEBA_CLIENT)" class="p-0 w-full login-button" >
+      <i class="pi pi-envelope"></i>
+      <span>Continue with E-mail</span>
+    </p-button>
+
+
+    <div class="flex justify-content-end mt-5">
+      <a routerLink="/auth/new-account"> SignUp </a>
+    </div>
+  </div>
+</div>
